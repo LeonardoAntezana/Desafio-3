@@ -102,6 +102,7 @@ body {
         height: 45%;
         width: 70%; }
         body .conteiner__grid .welcome .welcome__title {
+          font-size: 4rem;
           text-align: left; }
         body .conteiner__grid .welcome .welcome__description {
           text-align: left;
