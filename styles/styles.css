@@ -6,11 +6,12 @@
 
 body {
   font-family: "League Spartan", sans-serif;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background: url(/images/bg-pattern-top-mobile.svg) top left no-repeat, url(/images/bg-pattern-bottom-mobile.svg) bottom right no-repeat; }
   body .conteiner__grid {
     max-width: 90%;
     margin: auto;
-    height: 100%;
+    height: 100vh;
     display: grid;
     grid-template-areas: " welcome" " stars"  " conteiner-cards" " attribution";
     grid-template-rows: 0.5fr 0.5fr 1fr auto;
@@ -18,7 +19,11 @@ body {
     row-gap: 3rem; }
     body .conteiner__grid .welcome {
       grid-area: welcome;
-      align-self: center; }
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 10rem; }
       body .conteiner__grid .welcome .welcome__title {
         font-size: 3rem;
         font-weight: 900;
@@ -80,4 +85,49 @@ body {
         body .conteiner__grid .conteiner__cards .card .description {
           color: white; }
     body .conteiner__grid .attribution {
-      grid-area: attribution; }
+      grid-area: attribution;
+      justify-self: center;
+      align-self: end; }
+
+@media screen and (min-width: 1040px) {
+  body {
+    background: url(/images/bg-pattern-top-desktop.svg) top left no-repeat, url(/images/bg-pattern-bottom-desktop.svg) bottom left no-repeat; }
+    body .conteiner__grid {
+      max-width: 80%;
+      grid-template-areas: " welcome stars" " welcome stars" " conteiner-cards conteiner-cards" "attribution attribution";
+      grid-template-rows: 0.5fr 0.5fr 0.6fr 0.5fr;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 3rem; }
+      body .conteiner__grid .welcome {
+        height: 45%;
+        width: 70%; }
+        body .conteiner__grid .welcome .welcome__title {
+          text-align: left; }
+        body .conteiner__grid .welcome .welcome__description {
+          text-align: left;
+          font-size: 1.5rem; }
+      body .conteiner__grid .stars {
+        position: relative;
+        align-self: center; }
+        body .conteiner__grid .stars .opinion {
+          width: 60%; }
+        body .conteiner__grid .stars :nth-child(2) {
+          margin: 0 auto; }
+        body .conteiner__grid .stars :nth-child(3) {
+          margin: 0 0 0 auto; }
+      body .conteiner__grid .conteiner__cards {
+        min-height: auto;
+        flex-direction: row; }
+        body .conteiner__grid .conteiner__cards .card {
+          max-width: 30rem;
+          height: 16rem;
+          padding: 2.5rem;
+          font-size: 1.3rem; }
+          body .conteiner__grid .conteiner__cards .card .card__head {
+            width: 12rem; }
+        body .conteiner__grid .conteiner__cards .card:nth-child(2) {
+          position: relative;
+          top: 2rem; }
+        body .conteiner__grid .conteiner__cards .card:nth-child(3) {
+          position: relative;
+          top: 4rem; } }
