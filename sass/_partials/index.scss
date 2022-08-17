@@ -1,0 +1,102 @@
+body{
+    font-family: $fontPrincipal;
+    min-height: 100vh;
+    .conteiner__grid{
+        max-width: 90%;
+        margin: auto;
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+            " welcome"
+            " stars" 
+            " conteiner-cards"
+            " attribution"
+        ;
+        grid-template-rows: 0.5fr 0.5fr 1fr auto;
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+        .welcome{
+            grid-area: welcome;
+            align-self: center;
+            .welcome__title{
+                font-size: 3rem;
+                font-weight: 900;
+                text-align: center;
+                color: $veryDarkMagenta;
+            }
+            .welcome__description{
+                color: $darkGrayishMagenta;
+                text-align: center;
+            }
+        }
+        
+        .stars{
+            grid-area: stars;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 14rem;
+            .opinion{
+                background-color: $lightGrayishMagenta;
+                border-radius: 0.5rem;
+                padding: 0.8rem 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                min-height: 4.5rem;
+                .opinion__description{
+                    color: $veryDarkMagenta;
+                    font-weight: 700;
+                }
+            }
+
+        }
+        
+        .conteiner__cards{
+            grid-area: conteiner-cards;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 37rem;
+            .card{
+                background-color: $veryDarkMagenta;
+                border-radius: 0.5rem;
+                padding: 1.5rem 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 11.5rem;             
+                .card__head{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 10rem;
+                    img{
+                     border-radius: 50%;
+                     width: 3rem;
+                    }
+                    .data{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        height: 100%;
+                        .data__name{
+                            color: $white;
+                        }
+                        .data__verified{
+                            color: $softPink;
+                        }
+                    }
+                }
+                .description{
+                    color: $white;
+                }
+            }
+        }
+        .attribution{
+            grid-area: attribution;
+        }
+    }
+}
