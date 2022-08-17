@@ -1,0 +1,1 @@
+Hola! En este tercer desafio de Front End Mentor decidi utilizar Grids para el layout. Si existe una mejor solucion o ves errores agradeceria el feedback! Todavia no manejo al 100% grid y tengo dudas a la hora de asignarles FR a los grids-items. Saludos!
